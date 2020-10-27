@@ -1,0 +1,7 @@
+{
+    "svg.completion.emmet": true,
+    "svg.completion.showDeprecated": true,
+    "svg.completion.showAdvanced": true,
+    "svg.minify.addAttributesToSVGElement": true,
+    "svg.minify.addClassesToSVGElement": true
+}

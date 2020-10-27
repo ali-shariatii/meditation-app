@@ -41,7 +41,47 @@
     
     <!-- SITE CONTENT STARTS HERE -->
 
-    <p>Yo!</p>
+    <div id="pageContainer">
+
+        <video loop muted id="bgVideo">
+            <source src="assets/videos/rain.mp4">
+        </video>
+
+        <div id="head">
+            <h2>Meditation App</h2>
+        </div>
+
+        <div id="appContainer">
+            <div id="timeSelectorContainer">
+                <button>02 Minutes</button>
+                <button>05 Minutes</button>
+                <button>10 Minutes</button>
+            </div>
+
+            <div id="ControlContainer">
+                <audio id="bgAudio">
+                    <source src="assets/sounds/rain.mp3">
+                </audio>
+                <div id="trackerContainer">
+                   <img id="playBtn" src="assets/images/play.svg" alt="play button">    
+                    <svg class="trackerOutline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                    </svg> 
+                    <svg class="trackerOutline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                    </svg>  
+                </div>
+                <div id="timer">
+                    <h2>02:00</h2>
+                </div>
+            </div>
+    
+            <div id="themePickerContainer">
+                <button data-music="assets/sounds/rain.mp3" data-video="assets/videos/rain.mp3"><img src="assets/images/rain.svg" alt="rain"></button>
+                <button data-music="assets/sounds/beach.mp3" data-video="assets/videos/beach.mp3"><img src="assets/images/beach.svg" alt="beach"></button>
+            </div>
+        </div>
+    </div>
 
     <!-- SITE CONTENT ENDS HERE -->
 
