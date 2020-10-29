@@ -32,7 +32,10 @@
                 timerDisplay.innerText = `0${Math.floor(duration / 60)}:00`;
             }
 
-            reset();
+            bgAudio.pause();
+            bgVideo.pause();
+            bgAudio.currentTime = 0;
+            playBtn.src = "assets/images/play.svg";
         });
     });
 
@@ -41,9 +44,12 @@
 
     themeSelectors.forEach(item => {
         item.addEventListener("click", function() {
-            bgAudio.src = this.getAttribute("data-music");
-            bgVideo.src = this.getAttribute("data-video");
             playBtn.src = "assets/images/play.svg";
+            bgAudio.pause();
+            bgAudio.src = this.getAttribute("data-music");
+            bgAudio.currentTime = 0;
+            bgVideo.src = this.getAttribute("data-video");
+            bgVideo.pause();
         });
     });
     
@@ -84,15 +90,14 @@
             // animate the timer circle by changing the offset length from full length to 0.
             timerCircle.style.strokeDashoffset = timerCircleLength * (1 - (currentT / duration));
  
-            let reset = () => {
+            (() => {
                 if(currentT >= duration) {
                     bgAudio.pause();
                     bgVideo.pause();
                     bgAudio.currentTime = 0;
                     playBtn.src = "assets/images/play.svg";
                 }
-            };
-            reset();
+            })();
         });
     });
 })();
