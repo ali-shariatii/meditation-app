@@ -14,6 +14,12 @@
     // time selectors
     let duration = 120;
     let timeSelectors = document.querySelectorAll("#timeSelectorContainer button");
+    let reset = () => {
+        bgAudio.pause();
+        bgVideo.pause();
+        bgAudio.currentTime = 0;
+        playBtn.src = "assets/images/play.svg";
+    }
 
     timeSelectors.forEach(item => {
         item.addEventListener("click", function() {
@@ -32,10 +38,7 @@
                 timerDisplay.innerText = `0${Math.floor(duration / 60)}:00`;
             }
 
-            bgAudio.pause();
-            bgVideo.pause();
-            bgAudio.currentTime = 0;
-            playBtn.src = "assets/images/play.svg";
+            reset();
         });
     });
 
@@ -44,16 +47,13 @@
 
     themeSelectors.forEach(item => {
         item.addEventListener("click", function() {
-            playBtn.src = "assets/images/play.svg";
-            bgAudio.pause();
             bgAudio.src = this.getAttribute("data-music");
-            bgAudio.currentTime = 0;
             bgVideo.src = this.getAttribute("data-video");
-            bgVideo.pause();
+
+            reset();
         });
     });
     
-
     // play/pause the video &  audio.
     playBtn.addEventListener("click", () => {
         
@@ -71,6 +71,7 @@
         bgAudio.addEventListener("timeupdate", () => {
             // while the song is played, it returns the current position in seconds
             let currentT = bgAudio.currentTime;
+
             // calculates when the time you want the audio/video to be stopped
             let elapseTime = duration - currentT;
 
@@ -88,14 +89,12 @@
 
             timerDisplay.innerText = `${minutes}:${seconds}`;
             // animate the timer circle by changing the offset length from full length to 0.
+            timerCircle.style.transition = "linear all 0.3s";
             timerCircle.style.strokeDashoffset = timerCircleLength * (1 - (currentT / duration));
  
             (() => {
                 if(currentT >= duration) {
-                    bgAudio.pause();
-                    bgVideo.pause();
-                    bgAudio.currentTime = 0;
-                    playBtn.src = "assets/images/play.svg";
+                    reset();
                 }
             })();
         });

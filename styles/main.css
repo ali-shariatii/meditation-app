@@ -186,12 +186,6 @@ h2 {
     position: absolute;
 }
 
-@keyframes loop {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
 #timer {
     display: flex;
     justify-content: center;
