@@ -23,7 +23,7 @@ Check out the live version [here](https://ali-shariatii.github.io/meditation-app
 
 <!-- built -->
 ## Built with
-* JavaScript
+* JavaScript & WebAPI
 * HTML
 * CSS
 * Git
@@ -48,12 +48,12 @@ Minimum recommended technical knowledge prior to rebuilding the project:
 * CSS
     * basic knowledge
     * -webkit, -moz, -ms, -o
-    * css pseudo elements
+    * css pseudo classes
     * transform & transition properties
     * position & display properties
     * responsive css units
     * media queries
-* JavaScript
+* JavaScript & WebAPI
     * DOM & DOM methods
     * multimedia methods
     * event listeners
@@ -67,6 +67,7 @@ Minimum recommended technical knowledge prior to rebuilding the project:
     * console
     * sources
     * toggle device toolbar
+    * elements
 
 <!-- new releases -->
 ## Next Releases
