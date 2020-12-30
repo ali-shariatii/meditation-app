@@ -80,6 +80,7 @@ Minimum recommended technical knowledge prior to rebuilding the project:
     * hover and click effect for touch devices
     * web api music volume control
     * adding css variables
+    * checking flexbox gap property for safari compatibility issue
 
 <!-- contribution -->
 ## Contribution Rules
