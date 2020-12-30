@@ -81,6 +81,7 @@ Minimum recommended technical knowledge prior to rebuilding the project:
     * web api music volume control
     * adding css variables
     * checking flexbox gap property for safari compatibility issue
+    * visual design control for big screens
 
 <!-- contribution -->
 ## Contribution Rules
