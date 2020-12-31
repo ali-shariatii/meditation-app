@@ -33,6 +33,7 @@ Check out the live version [here](https://ali-shariatii.github.io/meditation-app
 * Firefox DevTool
 * Responsive Styling
 * Interactive Coding
+* Visual Studio Code
 
 <!-- prerequisites -->
 ## Prerequisites
